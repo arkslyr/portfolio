@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhay - About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&family=Poppins:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #bb3e44;
+            color: white;
+        }
+        
+        nav {
+            display: flex;
+            height: 90px;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #FF9398;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul li a:hover {
+            color: rgb(230, 105, 33);
+            font-size: 1.02rem;
+        }
+        
+        .left {
+            font-size: 1.5rem;
+        }
+        
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 140px 0;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .firstsection>div {
+            width: 60%;
+            margin: 30px 0;
+        }
+        
+        .leftsection {
+            font-size: 1.8rem;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        }
+        
+        .about-content img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        
+        .about-content h2 {
+            margin-bottom: 20px;
+        }
+        
+        .purp {
+            color: #DF6C4F;
+        }
+        
+        main hr {
+            border: 0;
+            background: rebeccapurple;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        {% load static %}
+        <nav>
+            <div class="left">Abhay's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'project' %}">Projects</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'service' %}">CV</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                <h1>About Me</h1>
+            </div>
+            <div class="about-content">
+                <img src="{% static 'assets/img/profile1.png' %}" alt="Abhay's Profile Picture">
+                <h2>Hi, I'm Abhay</h2>
+                <p>
+                    I am a passionate web developer with a knack for creating engaging and user-friendly web applications. My journey into the world of web development began several years ago, and it has been a thrilling adventure of learning and growth ever since.
+                </p>
+                <p>
+                    With a background in web design, video editing, and a love for gaming, I bring a unique blend of creativity and technical expertise to every project I work on. I enjoy solving complex problems and continuously strive to improve my skills and stay updated
+                    with the latest industry trends.
+                </p>
+                <p>
+                    When I'm not coding, you can find me exploring new technologies, playing video games, or working on creative video editing projects.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
